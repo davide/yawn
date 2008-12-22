@@ -1,0 +1,22 @@
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+<title>Yawn</title>
+</head>
+<body>
+<div id="content">
+	<h2>Yawn</h2>
+	<h5><pre>Yaws for noobs (or something like that).</pre></h5>
+	<br/>
+	This is the default webpage for Yawn: a simple way to deploy <a href="http://www.erlang.org/doc/man/packages.html">various</a>
+	<a href="http://erlyweb.org/">webapps</a> on the same <a href="http://yaws.hyber.org/">Yaws server</a>.
+	<erl>
+% It would be nice to have a "installed webapps" listing.
+% We could access (hacks are fine by me :P) the server config and
+% print out a bunch of links to the appmods.
+out(A) ->
+	{html, ""}.
+	</erl>
+</div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+body {
+  font-family: arial, verdana,  helvetica, sans-serif;
+  color: #353535;
+  margin:10px 0px; padding:0px;
+  text-align:center;
+}
+
+#Content {
+  width:80%;
+  margin:0px auto;
+  text-align:left;
+  padding:15px;
+} 
+H1 {font-size: 1.5em;}
