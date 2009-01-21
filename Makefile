@@ -5,7 +5,7 @@ code: clean
 
 run:
 	erl -noshell -eval 'filelib:ensure_dir("./log/").' -pa ebin -s erlang halt
-	erl -yaws debug -run yaws --conf yawn.conf -yaws id yawn
+	erl -yaws debug -run yaws -yaws id yawn -conf priv/yaws.conf
 
 clean:
 	rm -fv ebin/*.beam yawn.rel yawn.script yawn.boot erl_crash.dump *.log *.access
