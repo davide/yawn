@@ -103,7 +103,8 @@ the request into:
         </opaque>
 	arg_rewrite_mod = yawn
 </server>
-Additionally, it will call yaws_vdir before returning #arg to yaws.
+Additionally, it will call yawn_vdir before returning #arg to yaws
+(it used to call yaws_vdir but that file got deprecated so I copied it over).
 
 The yawn opaque variable values should start with the appmod
 URI followed by a comma and a list of comma separated "key = value"

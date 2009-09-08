@@ -52,7 +52,7 @@
 %%%         &lt;/opaque&gt;
 %%% 	arg_rewrite_mod = yawn
 %%% &lt;/server&gt;
-%%% Additionally, it will call yaws_vdir before returning #arg to yaws.
+%%% Additionally, it will call yawn_vdir before returning #arg to yaws.
 %%%
 %%% <p>The yawn opaque variable values should start with the appmod
 %%% URI followed by a comma and a list of comma separated "key = value"
@@ -67,6 +67,7 @@
 
 -include_lib("yaws/include/yaws_api.hrl").
 -include_lib("yaws/include/yaws.hrl").
+
 -export([arg_rewrite/1]).
 
 -define(opaque_variable, ?MODULE_STRING).
@@ -77,7 +78,7 @@ arg_rewrite(Arg) ->
     % Rebuild the request according to the matched appmods
     Arg1 = match_hostname(Arg),
     % But let VDirs override whatever they need to get file serving right
-    Arg2 = yaws_vdir:arg_rewrite(Arg1),
+    Arg2 = yawn_vdir:arg_rewrite(Arg1),
     Arg2.
 
 match_hostname(Arg) ->
